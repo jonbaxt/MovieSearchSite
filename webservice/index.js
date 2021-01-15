@@ -1,23 +1,11 @@
 const express = require('express');
-// const bodyParser = require('body-parser');
-// const session = require('express-sessions');
-// const axios = require('axios');
-// const massive = require('massive');
-// const chalk = require('chalk');
 require('dotenv').config();
 const con = require('./controller');
 
 const app = express();
 
 const PORT = 5000;
-/*
-const {
-    SERVER_PORT,
-    CONNECTION_STRING
-} = process.env;
-*/
 
-// app.use( bodyParser.json());
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     next();
